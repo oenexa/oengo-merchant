@@ -1,0 +1,20 @@
+{
+  "name": "@oengo/merchant",
+  "version": "1.0.0",
+  "description": "OENGO Decentralized Merchant & Restaurant Management Application",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@oenexa/api-contracts": "file:../oenexa-platform/packages/api-contracts",
+    "@oenexa/event-schemas": "file:../oenexa-platform/packages/event-schemas"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
