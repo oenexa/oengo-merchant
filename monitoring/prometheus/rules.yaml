@@ -1,0 +1,18 @@
+﻿groups:
+  - name: oengo-merchant-alerts
+    rules:
+      - alert: ServiceDown
+        expr: up{service=\"oengo-merchant\"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: \"oengo-merchant instance is down\"
+          description: \"Pod for oengo-merchant has been down for more than 1 minute.\"
+      - alert: High5xxRate
+        expr: rate(http_requests_total{service=\"oengo-merchant\",status=~\"5..\"}[5m]) > 0.05
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: \"Elevated 5xx error rate on oengo-merchant\"
