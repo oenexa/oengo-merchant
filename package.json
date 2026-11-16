@@ -8,10 +8,7 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc"
   },
-  "dependencies": {
-    "@oenexa/api-contracts": "file:../oenexa-platform/packages/api-contracts",
-    "@oenexa/event-schemas": "file:../oenexa-platform/packages/event-schemas"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^22.0.0",
     "typescript": "^5.7.0",
